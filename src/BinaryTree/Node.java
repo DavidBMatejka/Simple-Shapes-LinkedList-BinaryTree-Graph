@@ -1,7 +1,7 @@
 package BinaryTree;
 
 public class Node {
-    private int content;
+    private final int content;
     private Node left;
     private Node right;
 
@@ -32,7 +32,7 @@ public class Node {
     private String inOrder() {
         StringBuilder sb = new StringBuilder();
         if (left != null) sb.append(left.inOrder());
-        sb.append(content + " ");
+        sb.append(content).append(" ");
         if (right != null) sb.append(right.inOrder());
         return sb.toString();
     }

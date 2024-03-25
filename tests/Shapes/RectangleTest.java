@@ -2,7 +2,7 @@ package Shapes;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class RectangleTest {
 
@@ -71,7 +71,7 @@ class RectangleTest {
     void testToString() {
         Point2D p = new Point2D(3, 4);
         Rectangle rect = new Rectangle(p, 10, 5);
-        System.out.println(rect);;
+        System.out.println(rect);
         assertEquals("(3|4), width: 10, height: 5", rect.toString());
     }
 }

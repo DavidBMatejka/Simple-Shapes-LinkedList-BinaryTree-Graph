@@ -1,7 +1,5 @@
 package BinaryTree;
 
-import java.util.Arrays;
-
 public class BinaryTree {
     public Node root;
 
@@ -47,15 +45,19 @@ public class BinaryTree {
                     nachfolger += current.getRight().toString();
                 }
 
-                if (prev.getRight().getContent() == content) {
+                // wenn root geloescht werden soll
+                if (prev == null) {
+                    root = null;
+                }
+                else if (prev.getRight().getContent() == content) {
                     prev.setRight(null);
                 } else {
                     prev.setLeft(null);
                 }
 
                 String[] nachfolgerList = nachfolger.split(" ");
-                for (int i = 0; i < nachfolgerList.length; i++) {
-                    insert(Integer.parseInt(nachfolgerList[i]));
+                for (String s : nachfolgerList) {
+                    insert(Integer.parseInt(s));
                 }
                 return;
             }

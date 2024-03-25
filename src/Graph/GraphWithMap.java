@@ -3,7 +3,7 @@ package Graph;
 import java.util.*;
 
 public class GraphWithMap {
-    private HashMap<String, List<String>> graph;
+    private final HashMap<String, List<String>> graph;
 
     public GraphWithMap(List<String> input) {
         graph = new HashMap<>();

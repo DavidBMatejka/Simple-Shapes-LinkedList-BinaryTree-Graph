@@ -2,7 +2,8 @@ package BinaryTree;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 class BinaryTreeTest {
 
@@ -54,6 +55,17 @@ class BinaryTreeTest {
 
         bt.remove(5);
         assertEquals("1 2 3 4 7 9", bt.toString());
+    }
+    @Test
+    void testRemove2() {
+        BinaryTree bt = new BinaryTree();
+        bt.insert(3);
+        bt.insert(1);
+        bt.insert(2);
+        assertEquals("1 2 3", bt.toString());
+
+        bt.remove(3);
+        assertEquals("1 2", bt.toString());
     }
 
     @Test

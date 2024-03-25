@@ -17,8 +17,7 @@ public class Graph {
     }
 
     public boolean contains(String s) {
-        if (vertices.contains(getNodeOf(s))) return true;
-        return false;
+        return vertices.contains(getNodeOf(s));
     }
 
     private Node getNodeOf(String s) {
@@ -32,9 +31,8 @@ public class Graph {
 
     public String shortestPath(String start, String end) {
         Node startNode = getNodeOf(start);
-        Node endNode = getNodeOf(end);
 
-        Deque<Node> q = new LinkedList<Node>();
+        Deque<Node> q = new LinkedList<>();
         q.add(startNode);
 
         Map<String, String> comingFrom = new HashMap<>();

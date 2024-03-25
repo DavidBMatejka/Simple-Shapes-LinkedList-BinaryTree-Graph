@@ -20,11 +20,11 @@ class GraphTest {
         graph.addEdge("S", "B");
         graph.addEdge("A", "C");
         graph.addEdge("A", "B");
-        assertEquals(true, graph.contains("A"));
-        assertEquals(true, graph.contains("S"));
-        assertEquals(true, graph.contains("B"));
-        assertEquals(true, graph.contains("C"));
-        assertEquals(false, graph.contains("D"));
+        assertTrue(graph.contains("A"));
+        assertTrue(graph.contains("S"));
+        assertTrue(graph.contains("B"));
+        assertTrue(graph.contains("C"));
+        assertFalse(graph.contains("D"));
     }
 
     @Test
