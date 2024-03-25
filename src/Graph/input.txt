@@ -1,0 +1,4 @@
+S : A C
+A : S B C
+B : A Z
+C : S A Z
